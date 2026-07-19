@@ -1,0 +1,157 @@
+
+:root {
+  --bg-main: #f4f7fa;        /* Мягкий светлый фон */
+  --bg-card: #ffffff;        /* Белые карточки / блоки */
+  --color-primary: #0078d4;   /* Синий акцент Windows 11 */
+  --color-hover: #005a9e;     /* Темно-синий для ховеров */
+  --color-text: #202020;      /* Темный текст */
+  --color-muted: #555555;     /* Серый текст для подзаголовков */
+  --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-stack);
+  background-color: var(--bg-main);
+  color: var(--color-text);
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.legal-wrapper {
+  padding-top: 100px;
+  padding-bottom: 80px;
+}
+
+/* Сетка: Сайдбар + Текст договора */
+.legal-grid {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.sidebar {
+  background-color: var(--bg-card);
+  padding: 30px 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  position: sticky;
+  top: 100px;
+}
+
+.sidebar h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 20px;
+  border-bottom: 2px solid var(--color-primary);
+  padding-bottom: 8px;
+  letter-spacing: -0.3px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar li {
+  margin-bottom: 12px;
+}
+
+.sidebar a {
+  text-decoration: none;
+  font-size: 0.95rem;
+  color: var(--color-muted);
+  transition: color 0.2s ease;
+  display: inline-block;
+}
+
+.sidebar a:hover {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
+.sidebar-footer {
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px dashed rgba(0, 0, 0, 0.1);
+}
+
+.content-box {
+  background-color: var(--bg-card);
+  padding: 50px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+  border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.content-box h1 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin-bottom: 10px;
+  letter-spacing: -0.5px;
+}
+
+.doc-date {
+  font-size: 0.95rem;
+  color: var(--color-muted);
+  margin-bottom: 40px;
+}
+
+section {
+  margin-bottom: 40px;
+  scroll-margin-top: 110px;
+
+section h2 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 16px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  padding-bottom: 6px;
+}
+
+section p {
+  font-size: 1rem;
+  color: var(--color-text);
+  margin-bottom: 14px;
+  text-align: justify;
+}
+
+section strong {
+  color: #000000;
+}
+
+@media (max-width: 900px) {
+  .legal-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .sidebar {
+    position: static;
+    width: 100%;
+  }
+
+  .content-box {
+    padding: 30px 20px;
+  }
+
+  .content-box h1 {
+    font-size: 1.7rem;
+  }
+}
